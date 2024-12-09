@@ -535,20 +535,20 @@
                 <!-- Left Side Ends -->
                 <!-- Contact Form Starts -->
                 <div class="col-12 col-lg-8">
-                  <form class="contactform" method="post" action="php/process-form.php">
+                  <form class="contactform" onsubmit="sendEmail(); reset(); return false">
                     <div class="contactform">
                       <div class="row">
                         <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="text" name="name" placeholder="YOUR NAME">
+                          <input autocomplete="off" type="text" name="name" id="name" placeholder="YOUR NAME*" required>
                         </div>
                         <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="email" name="email" placeholder="YOUR EMAIL">
+                          <input autocomplete="off" type="email" name="email" id="email" placeholder="YOUR EMAIL*" required>
                         </div>
                         <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="text" name="subject" placeholder="YOUR SUBJECT">
+                          <input autocomplete="off" type="text" name="subject" id="subject" placeholder="YOUR SUBJECT">
                         </div>
                         <div class="col-12">
-                          <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                          <textarea name="message" id="message" placeholder="YOUR MESSAGE*" required></textarea>
                           <button type="submit" class="button">
                             <span class="button-text">Send Message</span>
                             <span class="button-icon fa fa-send"></span>
@@ -568,6 +568,38 @@
         </div>
       </div>
       <!-- Contact Ends -->
+
+      <!-- Making the contact form function and be able to receive mails from the form using smtp js -->
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        const outputMessage = document.querySelector(".form-message .output_message");
+
+        function sendEmail() {
+          Email.send({
+            SecureToken : "3b2fb4e8-2b22-4ce3-ac8d-d025d8ed1d1d",     // hidding the host server, username and password with the SecureToken
+            To : 'oluwaseyitemitope456@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Portfolio Contact Form Enquiry - " + document.getElementById("subject").value,
+            Body: `
+              <strong>Name: </strong> ${document.getElementById("name").value}<br>
+              <strong>Email: </strong> ${document.getElementById("email").value}<br>
+              <strong>Message: </strong> ${document.getElementById("message").value}
+            `,
+          })
+          .then((message) => {
+            outputMessage.style.color = "green";
+            outputMessage.textContent = "Message sent successfully!";
+            setTimeout(() => {
+              window.location.reload(); // Refresh the page after showing the message
+            }, 5000); // Wait 5 seconds before refreshing
+          })
+          .catch((error) => {
+            outputMessage.style.color = "red";
+            outputMessage.textContent = "Failed to send message. Please try again.";
+            console.error("Error:", error);
+          });
+        }
+      </script>
 
     </div>
     <!-- Main Content Ends -->
