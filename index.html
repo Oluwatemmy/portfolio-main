@@ -396,144 +396,15 @@
           </div>
           <!-- Page Title Ends -->
           <div class="main-content text-center">
-            <div id="grid-gallery" class="container grid-gallery">
-              <!-- Portfolio Grid Starts -->
-              <div class="grid-wrap">
-                <ul class="row grid gridlist">
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://pypi.org/project/authease/" target="_blank">
-
-                        <img src="img/projects/pypi_authease.png" alt="Authease Image">
-                      </a>
-                      <div>
-                        <span>Live Link</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/authease-api" target="_blank">
-
-                        <img src="img/projects/authease_api.png" alt="Authease-Api Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Buzz-Bite" target="_blank">
-
-                        <img src="img/projects/project-1.jpg" alt="Buzz-Bite Image">
-                      </a>
-                        <div>
-                          <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://oluwatemmy.netlify.app" target="_blank">
-
-                        <img src="img/projects/project-2.png" alt="Portolio Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Student-Management-API" target="_blank">
-
-                        <img src="img/projects/project-6.png" alt="Student-Management-API Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Link-Ease" target="_blank">
-
-                        <img src="img/projects/linkease_homepage.png" alt="Link-Ease Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Phonie" target="_blank">
-
-                        <img src="img/projects/project-5.jpg" alt="Phonie Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Tic-Tac-Toe" target="_blank">
-
-                        <img src="img/projects/project-3.webp" alt="Tic-Tac-Toe Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Blackjack" target="_blank">
-
-                        <img src="img/projects/black_jack.jpeg" alt="BlackJack Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                  <li>
-                    <figure>
-                      <a href="https://github.com/Oluwatemmy/Notes-APP-API" target="_blank">
-
-                        <img src="img/projects/project-4.png" alt="Notes-APP-API Image">
-                      </a>
-                      <div>
-                        <span>Github Repo</span>
-                      </div>
-                    </figure>
-                  </li>
-                  <!-- Portfolio Item Ends -->
-                </ul>
-              </div>
-              <!-- Portfolio Grid Ends -->
-
+            <div class="container">
+              <ul class="portfolio-filters">
+                <li><button class="active" data-filter="all">All</button></li>
+                <li><button data-filter="package">Packages</button></li>
+                <li><button data-filter="api">REST APIs</button></li>
+                <li><button data-filter="app">Web Apps</button></li>
+                <li><button data-filter="tool">Tools</button></li>
+              </ul>
+              <div class="row" id="projects-grid"></div>
             </div>
           </div>
         </div>
@@ -680,15 +551,12 @@
     <!-- Main Content Ends -->
     <!-- Template JS Files -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/cbpGridGallery.js"></script>
-    <script src="js/jquery.hoverdir.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/popper.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/projects.js"></script>
   </body>
 </html>
