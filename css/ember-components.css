@@ -192,6 +192,16 @@ body.light .stat-card {
     display: block !important;
   }
 }
+/* about page photo (phones only): same circular treatment as the hero */
+.about .main-img-mobile {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--ember-amber);
+  margin: 0 auto 28px;
+  display: block;
+}
 
 /* ---- about: stat tiles ---- */
 .stat-card {
