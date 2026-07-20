@@ -402,6 +402,22 @@ body.light .header ul.icon-menu li.icon-box i {
   font-weight: 600;
 }
 
+/* ---- portfolio: GitHub CTA under the grid ---- */
+.github-cta {
+  margin: 30px 0 50px;
+  padding-top: 34px;
+  border-top: 1px solid var(--ember-border);
+  text-align: center;
+}
+.github-cta p {
+  color: var(--ember-text-2);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.github-cta .button {
+  display: inline-block;
+}
+
 /* ---- portfolio: project cards ---- */
 /* widen the grid past the container on desktop, like the skills row */
 @media (min-width: 1200px) {
