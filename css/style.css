@@ -251,38 +251,6 @@ body.light hr.separator {
     background: #ddd;
   }
 
-  body.light .portfolio .slideshow nav {
-    background: #eee;
-    border-bottom: 1px solid #ddd;
-  }
-
-  body.light .portfolio .slideshow nav span img {
-    display: none;
-  }
-
-  body.light .portfolio .slideshow nav span.nav-next {
-    background-image: url("../img/projects/navigation/right-arrow.png");
-    background-size: cover;
-  }
-
-  body.light .portfolio .slideshow nav span.nav-prev {
-    background-image: url("../img/projects/navigation/left-arrow.png");
-    background-size: cover;
-  }
-
-  body.light .portfolio .slideshow nav span.nav-close {
-    background-image: url("../img/projects/navigation/close-button.png");
-    background-size: cover;
-  }
-
-  body.light .portfolio .slideshow nav span.nav-next,
-  body.light .portfolio .slideshow nav span.nav-prev {
-    top: 51px;
-  }
-
-  body.light .portfolio .slideshow {
-    background: #fff;
-  }
 }
 
 @media (max-width: 576px) {
