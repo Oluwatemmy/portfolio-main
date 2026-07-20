@@ -1,0 +1,42 @@
+/* =================================================================== */
+/* EMBER  amber #fbbf24 → orange #f97316 on warm charcoal #1c1917
+====================================================================== */
+
+.home h1,
+.about .box-stats h3,
+.title-section h2 span,
+.mobile-nav-element.active,
+body.light #menu li.active a,
+.contact .custom-span-contact i,
+.portfolio .grid figure:hover figcaption {
+	color: #fbbf24;
+}
+.home .home-details h1:before,
+.about .resume-box .icon,
+.contact ul.social li a:hover,
+body.light .contact ul.social li a:hover,
+.preloader .loader,
+.portfolio .grid li figure div,
+.header ul.icon-menu li.icon-box.active, .header ul.icon-menu li.icon-box:hover,
+body.light .header ul.icon-menu li.icon-box.active, body.light .header ul.icon-menu li.icon-box:hover,
+.btn,
+.header .icon-box h2,
+.home .color-block,
+.title-section hr,
+.line:before,
+.button:before,
+.button-icon {
+	background: linear-gradient(90deg, #fbbf24, #f97316);
+}
+.revealer > div:nth-child(2) {
+	background: linear-gradient(90deg, #fbbf24, #f97316) !important;
+}
+.contact .contactform input[type=text]:focus,
+.contact .contactform input[type=email]:focus,
+.contact .contactform textarea:focus,
+.button {
+	border: 1px solid #fbbf24;
+}
+.pie, .c100 .bar {
+	border: 0.08em solid #fbbf24;
+}
