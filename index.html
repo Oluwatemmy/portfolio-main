@@ -460,7 +460,11 @@
                 <!-- Left Side Ends -->
                 <!-- Contact Form Starts -->
                 <div class="col-12 col-lg-8">
-                  <form class="contactform" onsubmit="sendEmail(); reset(); return false">
+                  <form id="contactform" class="contactform" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="d-none">
+                      <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
                     <div class="contactform">
                       <div class="row">
                         <div class="col-12 col-md-4">
@@ -493,59 +497,6 @@
         </div>
       </div>
       <!-- Contact Ends -->
-
-      <!-- Making the contact form function and be able to receive mails from the form using smtp js -->
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        const outputMessage = document.querySelector(".form-message .output_message");
-        function sendEmail() {
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const subject = document.getElementById("subject").value || "No Subject Provided";
-          const message = document.getElementById("message").value;
-
-          Email.send({
-              SecureToken: "a845318f-7151-4cdd-96a8-7bcd826d2f79",  // hidding the host server, username and password with the SecureToken
-              To: 'oluwaseyitemitope456@gmail.com',
-              From: 'temmyotsutsuki@gmail.com',
-              Subject: `Portfolio Contact Form Enquiry - ${subject}`,
-              Body: `
-                <html>
-                  <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-                    <div style="max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 10px; background-color: #f9f9f9;">
-                      <h2 style="color: #4CAF50; text-align: center;">Portfolio Contact Form Submission</h2>
-                      <p><strong>Name: </strong> ${name}</p>
-                      <p><strong>Email: </strong> ${email}</p>
-                      <p><strong>Subject: </strong> ${subject}</p>
-                      <p><strong>Message: </strong></p>
-                      <p style="border-left: 4px solid #4CAF50; padding-left: 10px; color: #555;">
-                        ${message.replace(/\n/g, "<br>")}
-                      </p>
-                      <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
-                      <p style="font-size: 12px; text-align: center; color: #aaa;">This message was sent from your portfolio contact form.</p>
-                    </div>
-                  </body>
-                </html>
-              `,
-          }).then((message) => {
-            console.log("Email API Response:", message); // Log API response
-            if (message === "OK") {
-              outputMessage.style.color = "green";
-              outputMessage.textContent = "Message sent successfully!";
-              setTimeout(() => {
-                window.location.reload(); // Refresh the page after showing the message
-              }, 3000); // Wait 3 seconds before refreshing
-            } else {
-              outputMessage.style.color = "red";
-              outputMessage.textContent = "Failed to send message. Please try again.";
-            }
-          }).catch((error) => {
-            outputMessage.style.color = "red";
-            outputMessage.textContent = "Failed to send message. Please try again.";
-            console.error("Error:", error);
-          });
-        }
-      </script>
 
     </div>
     <!-- Main Content Ends -->

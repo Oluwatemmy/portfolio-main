@@ -14,6 +14,15 @@ var PROJECTS = [
     featured: true
   },
   {
+    name: "BaseScan Scraper",
+    desc: "Python scraper extracting on-chain data from BaseScan.",
+    stack: ["Python", "Scraping"],
+    github: "https://github.com/Oluwatemmy/BaseScan-Scraper",
+    live: null,
+    category: "tool",
+    featured: false
+  },
+  {
     name: "GigFlow API",
     desc: "Upwork-style freelancing platform REST API — gigs, proposals, contracts and payments, built with Django.",
     stack: ["Python", "Django", "DRF", "PostgreSQL"],
@@ -101,15 +110,6 @@ var PROJECTS = [
     github: "https://github.com/Oluwatemmy/Blog-API",
     live: null,
     category: "api",
-    featured: false
-  },
-  {
-    name: "BaseScan Scraper",
-    desc: "Python scraper extracting on-chain data from BaseScan.",
-    stack: ["Python", "Scraping"],
-    github: "https://github.com/Oluwatemmy/BaseScan-Scraper",
-    live: null,
-    category: "tool",
     featured: false
   }
 ];
