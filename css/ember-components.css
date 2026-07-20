@@ -37,14 +37,24 @@
   font-size: 22px;
   margin: 6px 0 0;
 }
-/* hero photo visible on phones (template hid it below 576px) */
+/* spacing between the stacked/side-by-side hero buttons */
+.home a.button {
+  margin: 0 10px 14px 0;
+}
+/* circular hero photo on mobile/tablet (shown below 992px) */
+.home .main-img-mobile {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 2px solid var(--ember-amber);
+  margin: 0 auto 24px;
+}
+/* template hid the photo below 576px — force it visible on phones */
 @media (max-width: 575.98px) {
   .home .main-img-mobile.d-none.d-sm-block {
     display: block !important;
-    max-width: 220px;
-    margin: 0 auto 24px;
-    border-radius: 20px;
-    border: 2px solid var(--ember-amber);
   }
 }
 
