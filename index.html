@@ -33,6 +33,21 @@
     <script src="js/modernizr.min.js"></script>
   </head>
   <body class="dark home-page">
+    <script>
+      /* apply saved/system theme before first paint to avoid a flash */
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || (!t && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+          document.body.classList.add("light");
+        }
+      } catch (e) {}
+    </script>
+
+    <!-- Theme Toggle Starts -->
+    <button id="theme-toggle" class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between dark and light theme">
+      <i class="fa fa-sun-o"></i>
+    </button>
+    <!-- Theme Toggle Ends -->
 
     <!-- Header Starts -->
     <header class="header" id="navbar-collapse-toggle">
@@ -97,6 +112,12 @@
                 <i class="fa fa-envelope-open"></i>
                 <span>Contact</span>
               </div>
+            </li>
+            <li class="mobile-theme-item">
+              <button type="button" class="mobile-theme-toggle" data-theme-toggle aria-label="Switch between dark and light theme">
+                <i class="fa fa-sun-o"></i>
+                <span class="theme-label">Light Mode</span>
+              </button>
             </li>
 
           </ul>
@@ -537,6 +558,7 @@
     <script src="js/menu.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/theme.js"></script>
     <!-- Animated particle background (three.js, self-hosted) -->
     <script type="module" src="js/aotem-bg.js"></script>
   </body>

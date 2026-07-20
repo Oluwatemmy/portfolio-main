@@ -15,6 +15,16 @@ const cfg = Object.assign({
 
 const YELLOW = new THREE.Color(cfg.accent);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* follow the site theme: warm-dark dims on charcoal, deeper amber on cream */
+function applyTheme(light) {
+  YELLOW.set(light ? '#d97706' : cfg.accent);
+  dim.set(light ? 0xd9cdb8 : 0x35322b);
+}
+document.addEventListener('aotem:theme', e => {
+  applyTheme(e.detail && e.detail.light);
+  if (reduced) renderer.render(scene, camera);
+});
 const isMobile = matchMedia('(max-width: 768px)').matches;
 
 const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: cfg.background === null });
@@ -62,6 +72,8 @@ const waves = new THREE.Points(wGeo, new THREE.PointsMaterial({
 waves.position.y = -1.2;
 scene.add(waves);
 const dim = new THREE.Color(0x35322b);
+/* modules load after theme.js's initial event — sync with the current theme now */
+applyTheme(document.body.classList.contains('light'));
 
 const clock = new THREE.Clock();
 let raf;
