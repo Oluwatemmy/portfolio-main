@@ -137,6 +137,45 @@ body.light .stat-card {
 .home a.button {
   margin: 0 10px 14px 0;
 }
+/* ---- hero social icons ---- */
+.hero-social {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+.hero-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ember-chip);
+  border: 1px solid var(--ember-border);
+  color: var(--ember-amber);
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.hero-social a:hover {
+  background: var(--ember-gradient);
+  color: #1c1917;
+  transform: translateY(-3px);
+}
+/* hero text centers below 992px — center the icons with it */
+@media (max-width: 991.98px) {
+  .hero-social {
+    justify-content: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-social {
+    justify-content: flex-start;
+  }
+}
+
 /* circular hero photo on mobile/tablet (shown below 992px) */
 .home .main-img-mobile {
   width: 220px;
