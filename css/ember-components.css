@@ -288,6 +288,10 @@ body.light .stat-card {
     margin-right: -55px;
   }
 }
+/* with 7 cards, center the incomplete last row */
+.skills-row {
+  justify-content: center;
+}
 .skill-card {
   background: var(--ember-surface);
   border: 1px solid var(--ember-border);
