@@ -109,6 +109,30 @@
   height: 1px;
   background: var(--ember-text-3);
 }
+/* phones: half-width tiles are too narrow for the dash indent + forced break */
+@media (max-width: 767.98px) {
+  .stat-card {
+    padding: 20px 18px;
+  }
+  .stat-card h3 {
+    font-size: 34px;
+  }
+  .stat-card h3 sup {
+    font-size: 18px;
+    top: -11px;
+  }
+  .stat-card .stat-label {
+    padding-left: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .stat-card .stat-label:before {
+    display: none;
+  }
+  .stat-card .stat-label br {
+    display: none;
+  }
+}
 
 /* ---- skills: categorized cards with pills ---- */
 .skill-card {
