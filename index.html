@@ -29,6 +29,9 @@
     <!-- Ember skin + components -->
     <link href="css/skins/ember.css" rel="stylesheet">
     <link href="css/ember-components.css" rel="stylesheet">
+    <!-- Preload the LCP hero image per breakpoint so it's discovered early -->
+    <link rel="preload" as="image" href="./img/oluwaseyi-hero-sm.jpg" media="(max-width: 991px)" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/oluwaseyi.jpg" media="(min-width: 992px)" fetchpriority="high">
     <!-- Modernizr JS File -->
     <script src="js/modernizr.min.js"></script>
   </head>
@@ -121,17 +124,17 @@
     </header>
     <!-- Header Ends -->
     <!-- Main Content Starts -->
-    <div class="pages">
+    <div class="pages" role="main">
       <!-- Home Starts -->
       <div class="page page--current" id="home">
         <div class="home">
           <div class="container-fluid main-container container-home p-0">
             <div class="color-block d-none d-lg-block"></div>
             <div class="row home-details-container align-items-center">
-			      <img class="col-lg-4 position-fixed d-none d-lg-block" src="./img/oluwaseyi.jpg" alt="">
+			      <img class="col-lg-4 position-fixed d-none d-lg-block" src="./img/oluwaseyi.jpg" fetchpriority="high" alt="">
               <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
                 <div>
-                  <img src="./img/oluwaseyi.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" style="object-fit: cover; object-position: top;" alt="Oluwaseyi Ajayi">
+                  <img src="./img/oluwaseyi-hero-sm.jpg" width="220" height="220" fetchpriority="high" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" style="object-fit: cover; object-position: top;" alt="Oluwaseyi Ajayi">
                   <span class="hero-kicker open-sans-font">Backend Developer</span>
                   <h1 class="text-uppercase poppins-font">I'm Oluwaseyi Ajayi</h1>
                   <p class="hero-tagline gradient-text poppins-font">Python · Django · APIs that scale</p>
